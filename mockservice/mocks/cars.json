@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/v1/cars"
+  },
+  "response": {
+    "body": [
+      { "id": 1, "name": "Mercedes" },
+      { "id": 2, "name": "Lexus" }
+    ]
+  }
+}
