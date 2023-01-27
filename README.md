@@ -1,5 +1,8 @@
 # Mock Service
 
+
+## Quick Start
+
 ```bash
 # Run service in background
 docker run -d --name mockservice_instance --rm -p 8080:3030 ghcr.io/yabha-isomap/mockservice:latest
@@ -17,3 +20,8 @@ $ curl localhost:8080/v1/books
 # Remove container
 $ docker stop mockservice_instance
 ```
+
+## How to customize it
+
+Refer [./mockservice/README.md](./mockservice/README.md)
+
