@@ -5,7 +5,7 @@
 
 ```bash
 # Run service in background
-docker run -d --name mockservice_instance --rm -p 8080:3030 ghcr.io/yabha-isomap/mockservice:latest
+docker run -d --name mockservice_instance --rm -p 8080:3030 yabhaisomap/mockservice:latest
 # Test it
 $ curl localhost:8080/v1/users
 # Output

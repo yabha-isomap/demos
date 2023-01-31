@@ -41,12 +41,12 @@ $ docker stop mockservice_instance
 
 1. Here replace `yabha-isomap` with your github user-name
 
-### Login to github container registry
+### Login to dockerhub container registry
 
 ```bash
 # Login to github container registry using your personal access token
 # Replace yabha-isomap with your github user-name
-$ echo $CR_PAT | docker login ghcr.io -u yabha-isomap --password-stdin
+docker login -u <your user> -p <ur password>
 # Output
 WARNING! Your password will be stored unencrypted in ~/.docker/config.json.
 Configure a credential helper to remove this warning. See
@@ -59,8 +59,8 @@ Login Succeeded
 
 ```bash
 # tag image to registry and push it
-docker tag mockservice:latest ghcr.io/yabha-isomap/mockservice:latest
-docker push ghcr.io/yabha-isomap/mockservice:latest
+docker tag mockservice:latest yabhaisomap/mockservice:latest
+docker push yabhaisomap/mockservice:latest
 ```
 
 ### Test image from github container registry
@@ -69,7 +69,7 @@ docker push ghcr.io/yabha-isomap/mockservice:latest
 # Logout to make sure we are testing as unauthenticated user
 docker logout ghcr.io
 # Run service in background
-docker run -d --name mockservice_instance --rm -p 8080:3030 ghcr.io/yabha-isomap/mockservice:latest
+docker run -d --name mockservice_instance --rm -p 8080:3030 yabhaisomap/mockservice:latest
 # Test it
 $ curl localhost:8080/v1/users
 # Output
